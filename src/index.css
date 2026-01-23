@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  background-color: #F5F2EA;
+  color: #121212;
+  /* Simplified background for now to prevent parsing issues */
+  background-image: radial-gradient(#E5E2DA 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark body {
+  background-color: #0F0F0F;
+  background-image: none;
+  color: #F9F9F4;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 20px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #374151;
+}
+
+/* Stroke text effect */
+.stroke-text {
+  -webkit-text-stroke: 1px currentColor;
+  color: transparent;
+}
