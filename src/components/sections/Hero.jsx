@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center pt-20 bg-[#F5F2EA]"
+            className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center pt-20 bg-[#F5F2EA] dark:bg-[#0F0F0F] transition-colors duration-500"
         >
 
             {/* ================= MOBILE / TABLET NAME + ROLE ================= */}
@@ -72,14 +72,14 @@ const Hero = () => {
 
                 {/* Right — Role */}
                 <motion.div
-                    className="absolute right-8 top-1/2 -translate-y-1/2 text-right"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 text-right"
                     animate={{
                         opacity: [0.4, 0.75, 0.4],
                         x: [0, -20, 0],
                         color: ['#7A6F5E', '#3A3A3A', '#7A6F5E']
                     }}
                     transition={{
-                        duration: 12,
+                        duration: 6,
                         repeat: Infinity,
                         ease: 'easeInOut'
                     }}

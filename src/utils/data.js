@@ -1,5 +1,6 @@
-import { FaReact, FaJs, FaNodeJs, FaPython, FaFigma, FaGithub, FaHome, FaUser, FaProjectDiagram, FaBook, FaPenNib, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiStorybook, SiTypescript } from 'react-icons/si';
+import { FaReact, FaJs, FaNodeJs, FaPython, FaFigma, FaGithub, FaHome, FaUser, FaProjectDiagram, FaBook, FaPenNib, FaLinkedin, FaTwitter, FaInstagram, FaGitAlt } from 'react-icons/fa';
+import { SiTailwindcss, SiMongodb, SiTypescript, SiCanva, SiPostman, SiVercel, SiCloudinary } from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
 
 export const NAV_LINKS = [
     { name: 'Home', icon: FaHome, href: '#home' },
@@ -11,30 +12,37 @@ export const NAV_LINKS = [
 
 export const SKILLS_DATA = {
     "Development": [
-        { name: 'JavaScript', icon: FaJs },
-        { name: 'React', icon: FaReact },
-        { name: 'Node.js', icon: FaNodeJs },
-        { name: 'Python', icon: FaPython },
-        { name: 'MongoDB', icon: SiMongodb },
-        { name: 'REST API', icon: null },
-        { name: 'Tailwind', icon: SiTailwindcss },
+        { name: 'JavaScript', icon: FaJs, color: '#F7DF1E' },
+        { name: 'React', icon: FaReact, color: '#61DAFB' },
+        { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
+        { name: 'Python', icon: FaPython, color: '#3776AB' },
+        { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+        { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4' },
+        { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
     ],
     "Design": [
-        { name: 'Figma', icon: FaFigma },
-        { name: 'UI Systems', icon: null },
-        { name: 'Prototyping', icon: null },
+        { name: 'Figma', icon: FaFigma, color: '#F24E1E' },
+        { name: 'Canva', icon: SiCanva, color: '#00C4CC' },
+        { name: 'Prototyping', icon: null, color: '#A8834F' },
+        { name: 'UI Systems', icon: null, color: '#A8834F' },
     ],
     "Product Thinking": [
-        { name: 'User Research', icon: null },
-        { name: 'Wireframing', icon: null },
+        { name: 'User Research', icon: null, color: '#A8834F' },
+        { name: 'Wireframing', icon: null, color: '#A8834F' },
+        { name: 'Strategy', icon: null, color: '#A8834F' },
     ],
     "Tools": [
-        { name: 'Git/GitHub', icon: FaGithub },
-        { name: 'VS Code', icon: null },
+        { name: 'Git', icon: FaGitAlt, color: '#F05032' },
+        { name: 'GitHub', icon: FaGithub, color: '#181717' },
+        { name: 'VS Code', icon: VscVscode, color: '#007ACC' },
+        { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+        { name: 'Cloudinary', icon: SiCloudinary, color: '#3448C5' },
+        { name: 'Vercel', icon: SiVercel, color: '#000000' },
     ],
     "Soft Skills": [
-        { name: 'Communication', icon: null },
-        { name: 'Teamwork', icon: null },
+        { name: 'Communication', icon: null, color: '#A8834F' },
+        { name: 'Teamwork', icon: null, color: '#A8834F' },
+        { name: 'Problem Solving', icon: null, color: '#A8834F' },
     ]
 };
 
