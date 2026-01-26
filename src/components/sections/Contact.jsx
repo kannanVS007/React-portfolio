@@ -22,7 +22,7 @@ const Contact = () => {
         setIsSubmitting(true);
 
         const formDataToSend = new FormData();
-        formDataToSend.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+        formDataToSend.append("access_key", "2d8d7e56-94b7-4636-a3ed-a0bc3c5b71d8");
         formDataToSend.append("name", formData.name);
         formDataToSend.append("email", formData.email);
         formDataToSend.append("message", `
