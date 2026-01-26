@@ -94,13 +94,16 @@ const Skills = () => {
                                     key={tab}
                                     onClick={() => handleTabClick(index)}
                                     className={`
-                    relative px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300
-                    border-2
-                    ${isActive
+    relative
+    px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300
+    border-2
+    ${isActive
                                             ? "text-white border-[#8B7355]"
-                                            : "text-gray-600 dark:text-gray-300 border-gray-200 dark:border-white/10 hover:border-[#8B7355] dark:hover:border-[#8B7355] bg-white dark:bg-[#1A1A1A]"}
-                  `}
+                                            : "text-gray-600 dark:text-gray-300 border-gray-200 dark:border-white/10 hover:border-[#8B7355] dark:hover:border-[#8B7355] bg-white dark:bg-[#1A1A1A]"
+                                        }
+  `}
                                 >
+
                                     {isActive && (
                                         <motion.div
                                             layoutId="activeTabBg"

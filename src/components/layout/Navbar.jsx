@@ -48,6 +48,9 @@ const Navbar = ({ darkMode, toggleDarkMode, onOpenRoadmap }) => {
             <NavBtn label="About" onClick={() => scrollTo("about")}>
               <User size={18} />
             </NavBtn>
+            <NavBtn label="Experience" onClick={() => scrollTo("experience")}>
+              <User size={18} />
+            </NavBtn>
 
             <NavBtn label="Projects" onClick={() => scrollTo("projects")}>
               <Folder size={18} />
