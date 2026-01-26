@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaPaperPlane, FaEnvelope, FaPhone, FaCheckCircle, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -21,33 +21,46 @@ const Contact = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        const templateParams = {
-            from_name: formData.name,
-            from_email: formData.email,
-            message_type: formData.type,
-            message: formData.message,
-            submission_time: new Date().toLocaleString(),
-        };
+        const formDataToSend = new FormData();
+        formDataToSend.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+        formDataToSend.append("name", formData.name);
+        formDataToSend.append("email", formData.email);
+        formDataToSend.append("message", `
+Type: ${formData.type}
+Message: ${formData.message}
+Sent at: ${new Date().toLocaleString()}
+    `);
 
         try {
-            await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-            );
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formDataToSend
+            });
 
-            setShowSuccess(true);
-            setFormData({ name: '', email: '', type: 'Collaboration', message: '' });
+            const data = await response.json();
 
-            setTimeout(() => setShowSuccess(false), 5000);
+            if (data.success) {
+                setShowSuccess(true);
+                setFormData({
+                    name: '',
+                    email: '',
+                    type: 'Collaboration',
+                    message: ''
+                });
+
+                setTimeout(() => setShowSuccess(false), 5000);
+            } else {
+                alert("Submission failed. Please try again.");
+            }
+
         } catch (error) {
-            console.error('EmailJS Error:', error);
-            alert('Something went wrong. Please try again.');
+            console.error(error);
+            alert("Network error. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
     };
+
 
 
     return (
