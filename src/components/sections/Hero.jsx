@@ -11,7 +11,7 @@ const Hero = () => {
 
             {/* ================= MOBILE / TABLET NAME + ROLE ================= */}
             {/* visible only below md */}
-            <div className="relative z-40 flex flex-col items-center text-center mb-[3.5rem] md:hidden">
+            <div className="relative z-40 flex flex-col items-center text-center mb-[3.5rem] md:hidden mt-[-3.5rem]">
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ const Hero = () => {
                         ease: 'easeInOut'
                     }}
                 >
-                    <h2 className="text-[2.8vw] font-semibold tracking-wide uppercase">
+                    <h2 className="text-[2.7vw] font-semibold tracking-wide uppercase">
                         Front End Developer
                     </h2>
                 </motion.div>
