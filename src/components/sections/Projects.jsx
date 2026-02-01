@@ -130,10 +130,10 @@ const Projects = () => {
                 {/* Heading */}
                 <div className="text-center mb-16">
                     <h2 className="text-5xl font-bold dark:text-white mb-4">
-                        Some of my Projects
+                        Live & Client Projects
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400">
-                        A showcase of technical complexity and design precision.
+                        Real-world applications built, deployed, and maintained for businesses and organizations.
                     </p>
                 </div>
 
