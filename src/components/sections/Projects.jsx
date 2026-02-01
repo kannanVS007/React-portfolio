@@ -1,47 +1,77 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowLeft, FaArrowRight, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiReact, SiNodedotjs, SiMongodb, SiExpress, SiTailwindcss, SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { motion } from 'framer-motion';
+import { FaArrowLeft, FaArrowRight, FaExternalLinkAlt } from 'react-icons/fa';
+import riya from "../../assets/riya-couture.png";
+import rbac from "../../assets/rbac.png";
+import chatbot from "../../assets/chatbot.png";
+import scribbles from "../../assets/scribbles.png";
+import trishul from "../../assets/trishul.png";
 
-// Mock Data for Premium Presentation
+
+// Mock Data
 const PROJECTS = [
     {
         id: 1,
-        title: "JNTU-GV Admission Portal",
-        description: "Designed and implemented an end-to-end university admission workflow that replaced manual processes, reducing friction for thousands of applicants. Features include real-time application tracking, document verification, and automated seat allocation analytics.",
-        tech: ["React", "Node.js", "MongoDB", "Express", "CSS"],
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop", // University/Abstract concept
-        date: "July 2025",
+        title: "Fashion E-Commerce Landing Page – Riya’s Couture",
+        description:
+            "A premium fashion e-commerce landing page focused on visual storytelling and conversion-driven design. Built with a modern UI to highlight collections, promotions, and brand identity.",
+        tech: ["React.js", "Tailwind CSS", "JavaScript"],
+        image: riya,
+        date: "2025",
         links: {
-            live: "#",
-            github: "#"
+            live: "https://riya-couture.netlify.app/"
         }
     },
     {
         id: 2,
-        title: "E-Commerce Dashboard",
-        description: "A comprehensive analytics dashboard for online retailers. Visualizes sales data, user demographics, and inventory status in real-time. Built with performance in mind using Next.js and high-performance charting libraries.",
-        tech: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop", // Dashboard/Analytics
-        date: "Aug 2024",
+        title: "Role-Based Access Control (RBAC) Admin Dashboard",
+        description:
+            "A modern admin dashboard to manage users, roles, and permissions efficiently. Designed with clean UI patterns, analytics cards, and role-based navigation for enterprise-level applications.",
+        tech: ["React.js", "Tailwind CSS", "Framer Motion"],
+        image: rbac,
+        date: "2025",
         links: {
-            live: "#",
-            github: "#"
+            live: "https://rbac-ui-assignment.netlify.app/users"
         }
     },
     {
         id: 3,
-        title: "TaskMaster Pro",
-        description: "A collaborative project management tool inspired by Trello and Asana. Supports drag-and-drop tasks, real-time updates via WebSockets, and team workspaces with granular permission settings.",
-        tech: ["React", "Redux", "Node.js", "Socket.io"],
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1939&auto=format&fit=crop", // Productivity/Task
-        date: "Jan 2025",
+        title: "AI Chatbot Interface – NPNG Tech",
+        description:
+            "An interactive chatbot UI built for AI-driven customer engagement. Designed to simulate real-time conversations and improve lead generation, onboarding, and customer support experiences.",
+        tech: ["React.js", "Tailwind CSS", "Framer Motion"],
+        image: chatbot,
+        date: "2025",
         links: {
-            live: "#",
-            github: "#"
+            live: "https://my-chatbot-react.netlify.app/"
+        }
+    },
+    {
+        id: 4,
+        title: "Scribbles – School of Design (Live Website)",
+        description:
+            "A professional educational website developed for a creative design institute. Focused on clean layout, strong typography, and illustration-based visuals to attract and inform prospective students.",
+        tech: ["HTML5", "CSS3"],
+        image: scribbles,
+        date: "Live Project",
+        links: {
+            live: "http://www.scribblesdesign.in/"
+        }
+    },
+    {
+        id: 5,
+        title: "Trishul Trades – Business ",
+        description:
+            "A full-fledged business website independently designed, developed, deployed, and hosted for Trishul Trades. The platform showcases school accessories, bags, and printing products with a customer-first approach, strong branding, and enquiry-focused CTAs. Built and maintained as part of my current company’s production environment.",
+        tech: ["HTML5", "CSS3", "Tailwind CSS"],
+        image: trishul,
+        date: "Current Company Project",
+        links: {
+            live: "https://trishultrades.com/"
         }
     }
 ];
+
 
 const Projects = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -54,15 +84,11 @@ const Projects = () => {
         setActiveIndex((prev) => (prev - 1 + PROJECTS.length) % PROJECTS.length);
     };
 
-    // Helper to determine z-index and visuals based on position relative to active activeIndex
     const getCardStyle = (index) => {
         if (index === activeIndex) return "active";
 
-        const length = PROJECTS.length;
-        // Simple logic for 3 items: Previous is (active - 1), Next is (active + 1)
-        // With wrap around logic
-        const prevIndex = (activeIndex - 1 + length) % length;
-        const nextIndex = (activeIndex + 1) % length;
+        const prevIndex = (activeIndex - 1 + PROJECTS.length) % PROJECTS.length;
+        const nextIndex = (activeIndex + 1) % PROJECTS.length;
 
         if (index === prevIndex) return "prev";
         if (index === nextIndex) return "next";
@@ -75,158 +101,132 @@ const Projects = () => {
             scale: 1,
             opacity: 1,
             zIndex: 30,
-            filter: "blur(0px)",
-            rotateY: 0,
-            transition: { duration: 0.6, ease: "easeOut" }
+            transition: { duration: 0.6 }
         },
         prev: {
-            x: "-60%", // Move to left
+            x: "-60%",
             scale: 0.85,
             opacity: 0.6,
             zIndex: 20,
-            filter: "blur(2px)",
-            rotateY: 15, // Subtle 3D turn
-            transition: { duration: 0.6, ease: "easeOut" }
+            transition: { duration: 0.6 }
         },
         next: {
-            x: "60%", // Move to right
+            x: "60%",
             scale: 0.85,
             opacity: 0.6,
             zIndex: 20,
-            filter: "blur(2px)",
-            rotateY: -15, // Subtle 3D turn
-            transition: { duration: 0.6, ease: "easeOut" }
+            transition: { duration: 0.6 }
         },
         hidden: {
-            x: 0,
-            scale: 0.5,
             opacity: 0,
-            zIndex: 10,
-            transition: { duration: 0.6, ease: "easeOut" }
+            scale: 0.5
         }
     };
 
-    // Mobile swipe handlers could be added here, but for now buttons work well.
-
     return (
-        <section id="projects" className="py-24 bg-[#F5F2EA] dark:bg-[#0F0F0F] overflow-hidden transition-colors duration-500">
-            <div className="container mx-auto px-4 max-w-7xl relative">
+        <section id="projects" className="py-24 bg-[#F5F2EA] dark:bg-[#0F0F0F] overflow-hidden">
+            <div className="container mx-auto px-4 max-w-7xl">
 
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold text-black dark:text-white mb-4 transition-colors duration-500 font-display">
+                    <h2 className="text-5xl font-bold dark:text-white mb-4">
                         Some of my Projects
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-gray-600 dark:text-gray-400">
                         A showcase of technical complexity and design precision.
                     </p>
                 </div>
 
-                {/* Stacked Carousel Container */}
-                <div className="relative h-[600px] md:h-[500px] flex items-center justify-center perspective-1000">
+                {/* Carousel */}
+                <div className="relative h-[550px] flex items-center justify-center">
 
-                    {/* Navigation Buttons (Desktop: Outside, Mobile: Bottom or Overlay) */}
-                    <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between z-40 px-4 md:px-12 pointer-events-none">
+                    {/* Nav Buttons */}
+                    <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-6 z-40">
                         <button
                             onClick={prevProject}
-                            className="w-12 h-12 rounded-full bg-white dark:bg-white/10 backdrop-blur-md shadow-lg flex items-center justify-center text-gray-800 dark:text-white hover:scale-110 hover:bg-[#8B7355] hover:text-white transition-all pointer-events-auto"
+                            className="w-12 h-12 rounded-full 
+             bg-white dark:bg-gray-800 
+             text-gray-900 dark:text-white
+             shadow flex items-center justify-center
+             hover:bg-gray-100 dark:hover:bg-gray-700
+             transition"
                         >
-                            <FaArrowLeft size={18} />
+                            <FaArrowLeft />
                         </button>
                         <button
                             onClick={nextProject}
-                            className="w-12 h-12 rounded-full bg-white dark:bg-white/10 backdrop-blur-md shadow-lg flex items-center justify-center text-gray-800 dark:text-white hover:scale-110 hover:bg-[#8B7355] hover:text-white transition-all pointer-events-auto"
+                            className="w-12 h-12 rounded-full 
+             bg-white dark:bg-gray-800 
+             text-gray-900 dark:text-white
+             shadow flex items-center justify-center
+             hover:bg-gray-100 dark:hover:bg-gray-700
+             transition"
                         >
-                            <FaArrowRight size={18} />
+                            <FaArrowRight />
                         </button>
                     </div>
 
                     {/* Cards */}
-                    <div className="relative w-full max-w-5xl h-full flex items-center justify-center">
-                        {PROJECTS.map((project, index) => {
-                            const status = getCardStyle(index);
-                            return (
-                                <motion.div
-                                    key={project.id}
-                                    variants={variants}
-                                    initial="hidden"
-                                    animate={status}
-                                    className="absolute w-[90%] md:w-[800px] bg-white dark:bg-[#1A1A1A] rounded-[2rem] shadow-2xl dark:border dark:border-white/5 overflow-hidden flex flex-col md:flex-row"
-                                    style={{
-                                        transformStyle: 'preserve-3d',
-                                    }}
-                                >
-                                    {/* Image Section (50%) */}
-                                    <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden group">
-                                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                        <img
-                                            src={project.image}
-                                            alt={project.title}
-                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                    </div>
+                    {PROJECTS.map((project, index) => {
+                        const status = getCardStyle(index);
+                        return (
+                            <motion.div
+                                key={project.id}
+                                variants={variants}
+                                animate={status}
+                                className="absolute w-[90%] md:w-[800px] bg-white dark:bg-[#1A1A1A] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
+                            >
+                                {/* Image */}
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full md:w-1/2 h-64 md:h-auto object-contain"
+                                />
 
-                                    {/* Content Section (50%) */}
-                                    <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-between">
-                                        <div>
-                                            <div className="flex justify-between items-start mb-4">
-                                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight font-display mb-2">
-                                                    {project.title}
-                                                </h3>
-                                            </div>
+                                {/* Content */}
+                                <div className="p-8 flex flex-col justify-between w-full md:w-1/2">
+                                    <div>
+                                        <h3 className="text-2xl font-bold dark:text-white mb-4">
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-gray-600 dark:text-gray-400 mb-6">
+                                            {project.description}
+                                        </p>
 
-                                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 text-sm md:text-base">
-                                                {project.description}
-                                            </p>
-
-                                            {/* Tech Stack Pills */}
-                                            <div className="flex flex-wrap gap-2 mb-8">
-                                                {project.tech.map((tech) => (
-                                                    <span
-                                                        key={tech}
-                                                        className="px-3 py-1 bg-[#F5F2EA] dark:bg-white/5 text-gray-700 dark:text-gray-300 rounded-full text-xs font-semibold tracking-wide border border-transparent dark:border-white/5"
-                                                    >
-                                                        {tech}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* Footer / Actions */}
-                                        <div className="flex items-center justify-between border-t border-gray-100 dark:border-white/5 pt-6 mt-auto">
-                                            <span className="text-xs font-bold uppercase tracking-widest text-[#8B7355]">
-                                                {project.date}
-                                            </span>
-
-                                            <a href="#" className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-white hover:text-[#8B7355] dark:hover:text-[#8B7355] transition-colors group">
-                                                View Details
-                                                <FaArrowRight className="group-hover:translate-x-1 transition-transform" size={12} />
-                                            </a>
+                                        <div className="flex flex-wrap gap-2 mb-6">
+                                            {project.tech.map((tech) => (
+                                                <span
+                                                    key={tech}
+                                                    className="px-3 py-1 text-xs bg-gray-100 dark:bg-white/10 rounded-full"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
-                </div>
 
-                {/* Pagination / Dots */}
-                <div className="flex justify-center mt-12 gap-3">
-                    {PROJECTS.map((_, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() => setActiveIndex(idx)}
-                            className={`
-                                h-3 rounded-full transition-all duration-300 
-                                ${idx === activeIndex
-                                    ? "w-8 bg-[#8B7355]"
-                                    : "w-3 bg-gray-300 dark:bg-gray-700 hover:bg-[#8B7355]/50"
-                                }
-                            `}
-                        />
-                    ))}
-                </div>
+                                    {/* Footer */}
+                                    <div className="flex items-center justify-between border-t pt-4">
+                                        <span className="text-xs font-bold text-[#8B7355]">
+                                            {project.date}
+                                        </span>
 
+                                        {/* LIVE DEMO LINK */}
+                                        <a
+                                            href={project.links.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 font-semibold hover:text-[#8B7355] transition"
+                                        >
+                                            Live Demo
+                                            <FaExternalLinkAlt size={12} />
+                                        </a>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );

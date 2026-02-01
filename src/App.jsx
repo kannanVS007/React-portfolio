@@ -9,6 +9,7 @@ import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
 import FloatingActions from "./components/common/FloatingActions";
 import RoadmapNavigation from "./components/standalone/RoadmapNavigation";
+import About from "./components/sections/About";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -69,6 +70,7 @@ function App() {
 
       <main>
         <Hero />
+        <About />
         <Skills />
         <Projects />
         <Education />

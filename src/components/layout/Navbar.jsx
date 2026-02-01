@@ -56,9 +56,6 @@ const Navbar = ({ darkMode, toggleDarkMode, onOpenRoadmap }) => {
               <Folder size={18} />
             </NavBtn>
 
-            <NavBtn label="Blogs" onClick={() => scrollTo("blogs")}>
-              <PenLine size={18} />
-            </NavBtn>
 
             {/* MORE */}
             <div className="relative">
@@ -90,19 +87,8 @@ const Navbar = ({ darkMode, toggleDarkMode, onOpenRoadmap }) => {
         {/* ===== RIGHT ===== */}
         <div className="flex items-center gap-4">
 
-          {/* 🧭 EXPLORE BUTTON (New) */}
-          <button
-            onClick={onOpenRoadmap}
-            className="
-              flex items-center gap-2 px-3 py-2 md:px-4 rounded-full
-              bg-[#E8D8BD] dark:bg-[#333] 
-              text-primary dark:text-white
-              font-medium text-sm transition-all hover:scale-105 active:scale-95
-            "
-          >
-            <Map size={18} />
-            <span className="hidden md:inline">Explore</span>
-          </button>
+
+
 
           {/* 🌙 THEME TOGGLE */}
           <button
@@ -125,9 +111,21 @@ const Navbar = ({ darkMode, toggleDarkMode, onOpenRoadmap }) => {
             </span>
           </button>
 
-          <button className="md:hidden">
-            <Menu size={26} />
+          {/* 🧭 EXPLORE BUTTON (New) */}
+          <button
+            onClick={onOpenRoadmap}
+            className="
+              flex items-center gap-2 px-3 py-2 md:px-4 rounded-full
+              bg-[#E8D8BD] dark:bg-[#333] 
+              text-primary dark:text-white
+              font-medium text-sm transition-all hover:scale-105 active:scale-95
+            "
+          >
+            <Map size={18} />
+            <span className="hidden md:inline">Explore</span>
           </button>
+
+
         </div>
 
       </div>

@@ -5,37 +5,23 @@ const EXPERIENCE_DATA = [
     {
         id: 1,
         role: "Front-End Developer",
-        company: "Nexify Software",
+        company: "Trishul Tech Solution",
         period: "Dec 2025 – Present",
         current: true,
         description: [
-            "Currently working as a Front-End Developer building and maintaining business websites for international clients, including a Denmark-based granite and stone industry company",
-            "Developing responsive, user-friendly web interfaces using HTML5, CSS3, JavaScript, React.js, and modern UI practices",
-            "Collaborating with designers and backend teams to translate business requirements into high-quality, scalable UI solutions",
+            "Collaborated directly with founders to convert business requirements into functional, responsive web pages",
+            "Optimized website layout, navigation, and responsiveness to improve user engagement",
+            "Contributed to brand credibility through a polished and professional online presence",
+            "Built reusable UI components using modern front-end practices",
         ],
-        skills: ["React.js", "HTML5", "CSS3", "JavaScript", "Responsive Design"],
-        impact: "Building global digital presence",
+        skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI Components"],
+        impact: "Foundation of expertise",
     },
     {
         id: 2,
         role: "Software Engineer",
         company: "Bezohminds",
         period: "Dec 2024 – Aug 2025",
-        current: false,
-        description: [
-            "Built and maintained enterprise-level web applications using Next.js (CSR & SSR) and Node.js",
-            "Developed and maintained a private app store with organized service listings to simplify internal application discovery",
-            "Implemented secure authentication and authorization systems for business applications",
-            "Focused on scalability, performance, and maintainable UI architecture",
-        ],
-        skills: ["Next.js", "Node.js", "SSR/CSR", "Authentication", "Scalability"],
-        impact: "Enterprise-grade architecture",
-    },
-    {
-        id: 3,
-        role: "Front-End Developer",
-        company: "Government Enterprises",
-        period: "July 2023 – Oct 2024",
         current: false,
         description: [
             "Independently handled end-to-end front-end development for internal enterprise web applications",
@@ -47,20 +33,22 @@ const EXPERIENCE_DATA = [
         impact: "30% improvement in maintainability",
     },
     {
-        id: 4,
+        id: 3,
         role: "Front-End Developer",
-        company: "Trishul Tech Solution",
-        period: "Nov 2022 – Apr 2023",
+        company: "Gove Enterprises",
+        period: "July 2023 – Oct 2024",
         current: false,
+
         description: [
-            "Collaborated directly with founders to convert business requirements into functional, responsive web pages",
-            "Optimized website layout, navigation, and responsiveness to improve user engagement",
-            "Contributed to brand credibility through a polished and professional online presence",
-            "Built reusable UI components using modern front-end practices",
+            "Built and maintained enterprise-level web applications using Next.js (CSR & SSR) and Node.js",
+            "Developed and maintained a private app store with organized service listings to simplify internal application discovery",
+            "Implemented secure authentication and authorization systems for business applications",
+            "Focused on scalability, performance, and maintainable UI architecture",
         ],
-        skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI Components"],
-        impact: "Foundation of expertise",
+        skills: ["Next.js", "Node.js", "SSR/CSR", "Authentication", "Scalability"],
+        impact: "Enterprise-grade architecture",
     },
+
 ];
 
 const ExperienceCard = ({ item, index }) => {

@@ -7,7 +7,6 @@ export const NAV_LINKS = [
     { name: 'About', icon: FaUser, href: '#about' },
     { name: 'Projects', icon: FaProjectDiagram, href: '#projects' },
     { name: 'Case Studies', icon: FaBook, href: '#case-studies' },
-    { name: 'Blogs', icon: FaPenNib, href: '#blogs' },
 ];
 
 export const SKILLS_DATA = {
