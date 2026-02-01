@@ -31,7 +31,7 @@ const PROJECTS = [
         image: rbac,
         date: "2025",
         links: {
-            live: "https://rbac-ui-assignment.netlify.app/users"
+            live: "https://rbac-ui-assignment.netlify.app/"
         }
     },
     {
