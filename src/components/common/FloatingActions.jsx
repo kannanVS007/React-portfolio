@@ -12,10 +12,13 @@ const FloatingActions = () => {
             </a>
             <a
                 href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition-all flex items-center gap-2"
             >
                 Resume <FaDownload />
             </a>
+
         </div>
     );
 };
