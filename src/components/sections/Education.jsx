@@ -12,7 +12,7 @@ const EDUCATION_DATA = [
         location: "Palayamkottai, Tirunelveli",
         score: "7.86",
         scoreLabel: "CGPA",
-        year: "2024",
+        year: "2022",
         logo: collegeLogo,
     },
     {
@@ -22,7 +22,7 @@ const EDUCATION_DATA = [
         location: "Palayamkottai, Tirunelveli",
         score: "80%",
         scoreLabel: "Percentage",
-        year: "2021",
+        year: "2019",
         logo: schoolLogo,
     },
 ];
