@@ -27,7 +27,7 @@ const Hero = () => {
                     transition={{ duration: 1, delay: 0.15 }}
                     className="text-[4vw] font-semibold uppercase tracking-widest text-[#7A6F5E]"
                 >
-                    Front End Developer
+                    Full Stack Developer
                 </motion.h2>
             </div>
 
@@ -39,7 +39,7 @@ const Hero = () => {
                             key={i}
                             className="text-lg md:text-2xl font-semibold uppercase tracking-[0.25em] mx-8 opacity-70"
                         >
-                            Front-End Developer • Modern Web Interfaces • Web Experiences
+                            Full Stack Developer • React & PHP • Scalable Web Applications • Modern Web Experiences
                         </span>
                     ))}
                 </div>
@@ -85,7 +85,7 @@ const Hero = () => {
                     }}
                 >
                     <h2 className="text-[2.7vw] font-semibold tracking-wide uppercase">
-                        Front End Developer
+                        Full Stack Developer
                     </h2>
                 </motion.div>
             </div>

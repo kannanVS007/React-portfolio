@@ -57,25 +57,21 @@ const AboutMe = () => {
                             className="space-y-4 md:space-y-5"
                         >
                             <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors">
-                                Hi, I'm{" "}
-                                <span className="font-semibold text-[#8B6B3E] dark:text-[#D6C7B1] transition-colors">
-                                    Kannan
-                                </span>
-                                , a Front-End Developer who loves turning ideas into intuitive, polished web experiences.
-                            </p>
+    Hi, I'm{" "}
+    <span className="font-semibold text-[#8B6B3E] dark:text-[#D6C7B1] transition-colors">
+        Kannan
+    </span>
+    , a Full Stack Web Developer passionate about turning ideas into intuitive, polished web experiences.
+</p>
 
-                            <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors">
-                                With over 2 years of experience, I've worked on startup products,
-                                enterprise platforms, and international client projects using
-                                React, Next.js, JavaScript, and modern UI practices.
-                            </p>
+<p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors">
+    With over 2.5 years of experience, I've worked on startup products, enterprise platforms, and real-world client projects using React, Next.js, JavaScript, and modern web development practices, including SSR and CSR rendering.
+</p>
 
-                            <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors">
-                                I care deeply about clean code, responsive design, and user
-                                experience. Whether it's building a scalable UI system or refining
-                                performance, I enjoy solving problems that sit at the intersection
-                                of design and development.
-                            </p>
+<p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors">
+    I have experience building backend API routes, integrating databases, fetching data on the frontend, and writing unit tests using Jest. I care deeply about clean code, responsive design, performance optimization, and user experience, and I enjoy solving problems at the intersection of design and development.
+</p>
+
                         </motion.div>
                     </motion.div>
                 </motion.div>

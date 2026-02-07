@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaArrowRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import riya from "../../assets/riya-couture.png";
-import rbac from "../../assets/rbac.png";
+import idacard from "../../assets/idcard.png";
 import chatbot from "../../assets/chatbot.png";
 import scribbles from "../../assets/scribbles.png";
 import trishul from "../../assets/trishul.png";
@@ -24,14 +24,15 @@ const PROJECTS = [
     },
     {
         id: 2,
-        title: "Role-Based Access Control (RBAC) Admin Dashboard",
+        title: "School ID Card Generator System",
         description:
-            "A modern admin dashboard to manage users, roles, and permissions efficiently. Designed with clean UI patterns, analytics cards, and role-based navigation for enterprise-level applications.",
-        tech: ["React.js", "Tailwind CSS", "Framer Motion"],
-        image: rbac,
-        date: "2025",
+            "A complete PHP-based ID card generation system designed for schools to create professional student ID cards. Supports both single and bulk ID card creation with automatic photo processing and print-ready output for large-scale school requirements.",
+        tech: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "GD Library"],
+        image: idacard,
+        date: "Current Company Project",
         links: {
-            live: "https://rbac-ui-assignment.netlify.app/"
+            live: "https://idcard-generate.trishultrades.com/",
+            github: "https://github.com/kannanVS007/id-card"
         }
     },
     {
@@ -211,16 +212,32 @@ const Projects = () => {
                                             {project.date}
                                         </span>
 
-                                        {/* LIVE DEMO LINK */}
-                                        <a
-                                            href={project.links.live}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2 font-semibold hover:text-[#8B7355] transition"
-                                        >
-                                            Live Demo
-                                            <FaExternalLinkAlt size={12} />
-                                        </a>
+                                        {/* LINKS */}
+                                        <div className="flex items-center gap-4">
+
+                                            {/* GitHub Link LEFT SIDE */}
+                                            {project.links?.github && (
+                                                <a
+                                                    href={project.links.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-gray-400 hover:text-black dark:hover:text-white text-lg transition"
+                                                >
+                                                    <FaGithub />
+                                                </a>
+                                            )}
+
+                                            {/* Live Demo Link */}
+                                            <a
+                                                href={project.links.live}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 font-semibold hover:text-[#8B7355] transition"
+                                            >
+                                                Live Demo
+                                                <FaExternalLinkAlt size={12} />
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>

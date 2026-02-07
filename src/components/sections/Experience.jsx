@@ -3,20 +3,20 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const EXPERIENCE_DATA = [
     {
-        id: 1,
-        role: "Front-End Developer",
-        company: "Trishul Tech Solution",
-        period: "Dec 2025 – Present",
-        current: true,
-        description: [
-            "Collaborated directly with founders to convert business requirements into functional, responsive web pages",
-            "Optimized website layout, navigation, and responsiveness to improve user engagement",
-            "Contributed to brand credibility through a polished and professional online presence",
-            "Built reusable UI components using modern front-end practices",
-        ],
-        skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI Components"],
-        impact: "Foundation of expertise",
-    },
+    id: 1,
+    role: "Full Stack Developer",
+    company: "Trishul Tech Solution",
+    period: "Dec 2025 – Present",
+    current: true,
+ description: [
+    "Developed web applications and websites using PHP, HTML, CSS, and JavaScript for company and client projects",
+    "Built an ID Card Generator system and multiple business websites including Trades and Denmark Granit platforms"
+],
+
+skills: ["HTML5", "CSS3", "JavaScript", "PHP", "Excel/CSV Processing"],
+impact: "Contributed to production-ready web applications"
+}
+,
     {
         id: 2,
         role: "Software Engineer",
