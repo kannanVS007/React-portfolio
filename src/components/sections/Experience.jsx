@@ -3,20 +3,20 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const EXPERIENCE_DATA = [
     {
-    id: 1,
-    role: "Full Stack Developer",
-    company: "Trishul Tech Solution",
-    period: "Dec 2025 – Present",
-    current: true,
- description: [
-    "Developed web applications and websites using PHP, HTML, CSS, and JavaScript for company and client projects",
-    "Built an ID Card Generator system and multiple business websites including Trades and Denmark Granit platforms"
-],
+        id: 1,
+        role: "Full Stack Developer",
+        company: "Trishul Tech Solution",
+        period: "Dec 2025 – Feb 2026",
+        current: true,
+        description: [
+            "Developed web applications and websites using PHP, HTML, CSS, and JavaScript for company and client projects",
+            "Built an ID Card Generator system and multiple business websites including Trades and Denmark Granit platforms"
+        ],
 
-skills: ["HTML5", "CSS3", "JavaScript", "PHP", "Excel/CSV Processing"],
-impact: "Contributed to production-ready web applications"
-}
-,
+        skills: ["HTML5", "CSS3", "JavaScript", "PHP", "Excel/CSV Processing"],
+        impact: "Contributed to production-ready web applications"
+    }
+    ,
     {
         id: 2,
         role: "Software Engineer",
