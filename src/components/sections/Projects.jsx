@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import riya from "../../assets/riya-couture.png";
 import idacard from "../../assets/idcard.png";
-import chatbot from "../../assets/chatbot.png";
+import skiller from "../../assets/skiller.png";
 import scribbles from "../../assets/scribbles.png";
 import trishul from "../../assets/trishul.png";
-
 
 // Mock Data
 const PROJECTS = [
@@ -37,14 +36,24 @@ const PROJECTS = [
     },
     {
         id: 3,
-        title: "AI Chatbot Interface – NPNG Tech",
+        title: "Become A Skiller – Bilingual EdTech LMS Platform",
         description:
-            "An interactive chatbot UI built for AI-driven customer engagement. Designed to simulate real-time conversations and improve lead generation, onboarding, and customer support experiences.",
-        tech: ["React.js", "Tailwind CSS", "Framer Motion"],
-        image: chatbot,
-        date: "2025",
+            "Become A Skiller is a premium bilingual Learning Management System (LMS) built for Tamil and English-speaking developers. The platform provides structured technical education with a modern, distraction-free interface. It includes secure authentication, a dynamic course interface, bilingual language switching, and an advanced admin panel for managing users, courses, and platform analytics.",
+        tech: [
+            "Next.js 14",
+            "React.js",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Zustand",
+            "JWT Authentication"
+        ],
+        image: skiller,
+        date: "2026",
         links: {
-            live: "https://my-chatbot-react.netlify.app/"
+            live: "https://edtech-course-ebon.vercel.app/"
         }
     },
     {
@@ -73,7 +82,6 @@ const PROJECTS = [
     }
 ];
 
-
 const Projects = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -96,6 +104,8 @@ const Projects = () => {
         return "hidden";
     };
 
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
     const variants = {
         active: {
             x: 0,
@@ -105,15 +115,15 @@ const Projects = () => {
             transition: { duration: 0.6 }
         },
         prev: {
-            x: "-60%",
-            scale: 0.85,
+            x: isMobile ? "-25%" : "-60%",
+            scale: isMobile ? 0.9 : 0.85,
             opacity: 0.6,
             zIndex: 20,
             transition: { duration: 0.6 }
         },
         next: {
-            x: "60%",
-            scale: 0.85,
+            x: isMobile ? "25%" : "60%",
+            scale: isMobile ? 0.9 : 0.85,
             opacity: 0.6,
             zIndex: 20,
             transition: { duration: 0.6 }
@@ -139,29 +149,20 @@ const Projects = () => {
                 </div>
 
                 {/* Carousel */}
-                <div className="relative h-[550px] flex items-center justify-center">
+                <div className="relative h-[650px] md:h-[550px] flex items-center justify-center">
 
                     {/* Nav Buttons */}
                     <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-6 z-40">
                         <button
                             onClick={prevProject}
-                            className="w-12 h-12 rounded-full 
-             bg-white dark:bg-gray-800 
-             text-gray-900 dark:text-white
-             shadow flex items-center justify-center
-             hover:bg-gray-100 dark:hover:bg-gray-700
-             transition"
+                            className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition"
                         >
                             <FaArrowLeft />
                         </button>
+
                         <button
                             onClick={nextProject}
-                            className="w-12 h-12 rounded-full 
-             bg-white dark:bg-gray-800 
-             text-gray-900 dark:text-white
-             shadow flex items-center justify-center
-             hover:bg-gray-100 dark:hover:bg-gray-700
-             transition"
+                            className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition"
                         >
                             <FaArrowRight />
                         </button>
@@ -175,7 +176,7 @@ const Projects = () => {
                                 key={project.id}
                                 variants={variants}
                                 animate={status}
-                                className="absolute w-[90%] md:w-[800px] bg-white dark:bg-[#1A1A1A] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
+                                className="absolute w-[95%] sm:w-[90%] md:w-[800px] bg-white dark:bg-[#1A1A1A] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row"
                             >
                                 {/* Image */}
                                 <img
@@ -190,6 +191,7 @@ const Projects = () => {
                                         <h3 className="text-2xl font-bold dark:text-white mb-4">
                                             {project.title}
                                         </h3>
+
                                         <p className="text-gray-600 dark:text-gray-400 mb-6">
                                             {project.description}
                                         </p>
@@ -212,10 +214,8 @@ const Projects = () => {
                                             {project.date}
                                         </span>
 
-                                        {/* LINKS */}
                                         <div className="flex items-center gap-4">
 
-                                            {/* GitHub Link LEFT SIDE */}
                                             {project.links?.github && (
                                                 <a
                                                     href={project.links.github}
@@ -227,7 +227,6 @@ const Projects = () => {
                                                 </a>
                                             )}
 
-                                            {/* Live Demo Link */}
                                             <a
                                                 href={project.links.live}
                                                 target="_blank"
@@ -237,6 +236,7 @@ const Projects = () => {
                                                 Live Demo
                                                 <FaExternalLinkAlt size={12} />
                                             </a>
+
                                         </div>
                                     </div>
                                 </div>
