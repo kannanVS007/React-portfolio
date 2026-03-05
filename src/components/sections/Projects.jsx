@@ -149,8 +149,7 @@ const Projects = () => {
                 </div>
 
                 {/* Carousel */}
-                <div className="relative h-[650px] md:h-[550px] flex items-center justify-center">
-
+                <div className="relative mt-10 h-[650px] md:h-[550px] flex items-start md:items-center justify-center">
                     {/* Nav Buttons */}
                     <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-6 z-40">
                         <button
