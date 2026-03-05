@@ -149,8 +149,7 @@ const Projects = () => {
                 </div>
 
                 {/* Carousel */}
-                <div className="relative mt-10 h-[650px] md:h-[550px] flex items-start md:items-center justify-center">
-                    {/* Nav Buttons */}
+                <div className="relative mt-10 min-h-[720px] md:h-[550px] flex items-start md:items-center justify-center">                    {/* Nav Buttons */}
                     <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-6 z-40">
                         <button
                             onClick={prevProject}
@@ -181,7 +180,7 @@ const Projects = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full md:w-1/2 h-64 md:h-auto object-contain"
+                                    className="w-full md:w-1/2 h-52 md:h-auto object-contain"
                                 />
 
                                 {/* Content */}
