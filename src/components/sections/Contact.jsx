@@ -88,7 +88,7 @@ Sent at: ${new Date().toLocaleString()}
                             transition={{ delay: 0.1 }}
                             className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8 max-w-lg"
                         >
-                            I'm a Front-End Developer with a passion for crafting responsive, user-friendly interfaces.
+                            I'm a Fullstack Developer with a passion for crafting responsive, user-friendly interfaces.
                             My experience enables me to build scalable web applications that solve real-world problems.
                             <br /><br />
                             Whether you're looking to launch a new product, or need a developer to join your team, I'm ready to help.
