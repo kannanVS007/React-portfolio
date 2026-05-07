@@ -2,27 +2,27 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const EXPERIENCE_DATA = [
-    {
-        id: 1,
-        role: "Full Stack Developer",
-        company: "Self Employed",
-        period: "Oct 2025 – Present",
-        current: true,
-        description: [
-            "Developed web applications and websites using PHP, HTML, CSS, and JavaScript for company and client projects",
-            "Built an ID Card Generator system and multiple business websites including Trades and Denmark Granit platforms"
-        ],
+    // {
+    //     id: 1,
+    //     role: "Full Stack Developer",
+    //     company: "Self Employed",
+    //     period: "Oct 2025 – Present",
+    //     current: true,
+    //     description: [
+    //         "Developed web applications and websites using PHP, HTML, CSS, and JavaScript for company and client projects",
+    //         "Built an ID Card Generator system and multiple business websites including Trades and Denmark Granit platforms"
+    //     ],
 
-        skills: ["HTML5", "CSS3", "JavaScript", "PHP", "Excel/CSV Processing"],
-        impact: "Contributed to production-ready web applications"
-    }
+    //     skills: ["HTML5", "CSS3", "JavaScript", "PHP", "Excel/CSV Processing"],
+    //     impact: "Contributed to production-ready web applications"
+    // }
     ,
     {
         id: 2,
         role: "Software Engineer",
         company: "Bezohminds",
-        period: "Dec 2024 – Aug 2025",
-        current: false,
+        period: "Dec 2024 – Present",
+        current: true,
         description: [
             "Independently handled end-to-end front-end development for internal enterprise web applications",
             "Built modular and scalable UI systems using HTML5, CSS3, SCSS, JavaScript (ES6), and Handlebars.js",
