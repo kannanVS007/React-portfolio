@@ -5,8 +5,8 @@ const EXPERIENCE_DATA = [
     {
         id: 1,
         role: "Full Stack Developer",
-        company: "Trishul Tech Solution",
-        period: "Dec 2025 – Feb 2026",
+        company: "Self Employed",
+        period: "Oct 2025 – Present",
         current: true,
         description: [
             "Developed web applications and websites using PHP, HTML, CSS, and JavaScript for company and client projects",
