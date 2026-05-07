@@ -28,7 +28,7 @@ const PROJECTS = [
             "A complete PHP-based ID card generation system designed for schools to create professional student ID cards. Supports both single and bulk ID card creation with automatic photo processing and print-ready output for large-scale school requirements.",
         tech: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "GD Library"],
         image: idacard,
-        date: "Independent Project",
+        date: "Independent Live Project",
         links: {
             live: "https://idcard-generate.netlify.app/",
             github: "https://github.com/kannanVS007/id-card"
@@ -75,7 +75,7 @@ const PROJECTS = [
             "A full-fledged business website independently designed, developed, deployed, and hosted. The platform showcases school accessories, bags, and printing products with a customer-first approach, strong branding, and enquiry-focused CTAs. Built and maintained as an independent professional project.",
         tech: ["HTML5", "CSS3", "Tailwind CSS"],
         image: trishul,
-        date: "Independent Project",
+        date: "Independent Live Project",
         links: {
             live: "https://business-platform.netlify.app/"
         }
