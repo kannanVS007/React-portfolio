@@ -18,7 +18,7 @@ const EXPERIENCE_DATA = [
     // }
     ,
     {
-        id: 2,
+        id: 1,
         role: "Software Engineer",
         company: "Bezohminds",
         period: "Dec 2024 – Present",
@@ -33,7 +33,7 @@ const EXPERIENCE_DATA = [
         impact: "30% improvement in maintainability",
     },
     {
-        id: 3,
+        id: 2,
         role: "Front-End Developer",
         company: "Gove Enterprises",
         period: "July 2023 – Oct 2024",
