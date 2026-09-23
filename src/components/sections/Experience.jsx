@@ -8,8 +8,7 @@ const EXPERIENCE_DATA = [
         role: "Software Engineer",
         company: "Bezohminds",
         period: "Dec 2024 – Aug 2025",
-93
-: true,
+        current: true,
         description: [
             "Independently handled end-to-end front-end development for internal enterprise web applications",
             "Built modular and scalable UI systems using HTML5, CSS3, SCSS, JavaScript (ES6), and Handlebars.js",

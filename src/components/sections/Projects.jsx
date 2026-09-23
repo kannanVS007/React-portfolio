@@ -77,7 +77,7 @@ const PROJECTS = [
         image: trishul,
         date: "Independent Live Project",
         links: {
-            live: "https://business-platform.netlify.app/"
+            live: "https://trishultrades.com/"
         }
     }
 ];
